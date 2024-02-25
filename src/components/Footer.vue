@@ -1,13 +1,13 @@
 <template>
-    <header>
+    <footer>
         <nav class="w-screen bg-blue-400 py-4">
             <div class="container mx-auto px-4">
                 <RouterLink to="/" class="text-3xl py-4 text-white">
-                    E-commerce App
+                    <img src="../assets/icons/shopping-cart-2-line.png" alt="App Icon">
                 </RouterLink>
             </div>
         </nav>
-    </header>
+    </footer>
 </template>
 
 <script setup>

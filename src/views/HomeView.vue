@@ -1,11 +1,13 @@
 <template>
-  <main>
-    <h1 class="text-3xl font-bold underline">
-    Hello world!
-    </h1>
-  </main>
+	<main>
+		<div class="container mx-auto px-4">
+			<h1 class="text-3xl font-bold underline">
+				Hello world!
+			</h1>
+		</div>
+	</main>
 </template>
 
-  <script setup>
-  
-  </script>
+<script setup>
+
+</script>
