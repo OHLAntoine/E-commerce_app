@@ -2,10 +2,10 @@
 	<main>
 		<div class="container mx-auto px-6 h-full">
 			<div class="pt-12">
-				<h1 class="text-center text-2xl font-bold">All Products</h1>
+				<input type="text" class="rounded border-2 border-gray-200 w-full ps-2 py-1" placeholder="Search for a item">
 			</div>
-			<card-list/>
 		</div>
+		<card-list/>
 	</main>
 </template>
 
