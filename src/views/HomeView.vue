@@ -11,4 +11,11 @@
 
 <script setup>
 	import CardList from '@/components/items/CardList.vue';
+	import { onMounted } from 'vue';
+	import axiosClient from '../axiosClient';
+
+	onMounted(() => {
+		const response = axiosClient.get('products')
+		console.log(response)
+	})
 </script>
