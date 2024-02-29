@@ -10,7 +10,7 @@
 <script setup>
 	import CardList from '@/components/products/CardList.vue';
 	import { ref ,onMounted } from 'vue';
-	import axiosClient from '../axiosClient';
+	import axiosClient from '@/axiosClient';
 
 	const products = ref([])
 
