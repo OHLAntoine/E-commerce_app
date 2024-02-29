@@ -10,5 +10,5 @@
 </template>
 
 <script setup>
-	import CardList from '@/components/items/CardList.vue';
+	import CardList from '@/components/products/CardList.vue';
 </script>

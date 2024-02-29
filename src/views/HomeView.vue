@@ -4,18 +4,20 @@
 			<div class="pt-12">
 				<h1 class="text-center text-2xl font-bold">All Products</h1>
 			</div>
-			<card-list/>
+			<card-list :products="products"/>
 		</div>
 	</main>
 </template>
 
 <script setup>
-	import CardList from '@/components/items/CardList.vue';
-	import { onMounted } from 'vue';
+	import CardList from '@/components/products/CardList.vue';
+	import { ref ,onMounted } from 'vue';
 	import axiosClient from '../axiosClient';
 
-	onMounted(() => {
-		const response = axiosClient.get('products')
-		console.log(response)
+	const products = ref([])
+
+	onMounted(async () => {
+		const response = await axiosClient.get('products')
+		products.value = response.data
 	})
 </script>
