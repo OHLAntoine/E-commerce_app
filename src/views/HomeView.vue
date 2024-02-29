@@ -1,12 +1,10 @@
 <template>
-	<main>
-		<div class="container mx-auto px-6 h-full">
-			<div class="pt-12">
-				<h1 class="text-center text-2xl font-bold">All Products</h1>
-			</div>
-			<card-list :products="products"/>
+	<div class="container mx-auto px-6 h-full">
+		<div class="pt-12">
+			<h1 class="text-center text-2xl font-bold">All Products</h1>
 		</div>
-	</main>
+		<card-list :products="products"/>
+	</div>
 </template>
 
 <script setup>
