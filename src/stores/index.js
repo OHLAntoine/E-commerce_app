@@ -1,11 +1,16 @@
 import { defineStore } from 'pinia'
-import * as state from './state'
-import * as getters from './getters'
-import * as mutations from './mutations'
-import * as actions from './actions'
+import axiosClient from "@/axiosClient";
 
-export const useItemsStore = defineStore('items', () => {
-
-    return { state, getters, mutations, actions }
-
+export default defineStore('products', {
+    state: () => ({ 
+        searchedProducts: []
+        }),
+    actions: {
+        searchProducts(keyword) {
+            axiosClient.get(`products/search?q=${keyword}`)
+                .then(({data}) => {
+                    this.searchedProducts = data.products
+                })
+        }
+    }
 })

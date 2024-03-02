@@ -15,3 +15,7 @@
 body {
     background-color: azure;
 }
+
+main {
+    min-height: 75vh;
+}
