@@ -18,11 +18,11 @@
 			</button>
 		</div>
 	</div>
-	<card-list :products="store.searchedProducts"/>
+	<product-card-list :products="store.searchedProducts"/>
 </template>
 
 <script setup>
-	import CardList from '@/components/products/CardList.vue';
+	import ProductCardList from '@/components/products/ProductCardList.vue';
 	import useProductStore from '@/stores'
 	import { ref } from 'vue';
 

@@ -3,12 +3,12 @@
 		<div class="pt-12">
 			<h1 class="text-center text-2xl font-bold">All Products</h1>
 		</div>
-		<card-list :products="products"/>
+		<product-card-list :products="products"/>
 	</div>
 </template>
 
 <script setup>
-	import CardList from '@/components/products/CardList.vue';
+	import productCardList from '@/components/products/ProductCardList.vue';
 	import { ref ,onMounted } from 'vue';
 	import axiosClient from '@/axiosClient';
 

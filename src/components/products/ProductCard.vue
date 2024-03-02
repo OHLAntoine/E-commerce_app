@@ -1,6 +1,6 @@
 <template>
     <article class="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300 w-full h-full">
-        <a href="#" class="flex flex-col justify-between h-full">
+        <router-link :to="{ name: 'productDetails', params: {id: product.id} }" class="flex flex-col justify-between h-full">
             <div class="relative flex justify-center overflow-hidden rounded-xl">
                 <img :src="product.images[0]" :alt="product.title" class="h-40"/>
                 <div class="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md">
@@ -23,11 +23,13 @@
                     </div>
                 </div>
             </div>
-        </a>
+        </router-link>
     </article>
 </template>
 
 <script setup>
+    import { RouterLink } from 'vue-router';
+
     defineProps({
         product: Object,
     })
