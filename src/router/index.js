@@ -3,6 +3,7 @@ import DefaultLayout from '@/views/layouts/DefaultLayout.vue'
 import HomeView from '@/views/HomeView.vue'
 import SearchView from '@/views/SearchView.vue'
 import ProductView from '@/views/ProductView.vue'
+import CategoryView from '@/views/CategoryView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -25,6 +26,11 @@ const router = createRouter({
           path: '/product/:id?',
           name: 'productDetails',
           component: ProductView
+        },
+        {
+          path: '/categories',
+          name: 'categories',
+          component: CategoryView
         }
       ]
     },

@@ -31,6 +31,11 @@
                             Search
                         </router-link>
                     </li>
+                    <li class="py-2 lg:py-0 ">
+                        <router-link :to="{ name: 'categories' }" class="text-white">
+                            Categories
+                        </router-link>
+                    </li>
                 </ul>
             </div>
         </nav>
