@@ -2,7 +2,7 @@ import { defineStore } from 'pinia'
 import axiosClient from "@/axiosClient";
 
 export default defineStore('products', {
-    state: () => ({ 
+    state: () => ({
         searchedProducts: [],
         productsByCategory: [],
         cart: []

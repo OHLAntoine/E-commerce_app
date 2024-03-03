@@ -26,8 +26,6 @@
 	import useProductStore from '@/stores'
 	import { ref } from 'vue';
 
-	console.log(store.cart)
-
 	const keyword = ref('')
 	const store = useProductStore()
 </script>

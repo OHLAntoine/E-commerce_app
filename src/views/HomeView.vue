@@ -17,5 +17,6 @@
 	onMounted(async () => {
 		const response = await axiosClient.get('products')
 		products.value = response.data.products
-	})
+	}
+	)
 </script>
