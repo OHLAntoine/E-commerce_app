@@ -8,11 +8,17 @@ export default defineStore('products', {
         cart: []
         }),
     getters: {
-        cartCount: (state) => state.cart.length,
+        cartCount: (state) => {
+            let sum = 0
+            state.cart.forEach(item => {
+                sum += item.quantity
+            })
+        return sum
+        },
         cartPrice: (state) => {
             let sum = 0
-            state.cart.forEach(product => {
-            sum += product.price
+            state.cart.forEach(item => {
+            sum += (item.product.price * item.quantity)
         })
         return sum
         }
@@ -33,8 +39,23 @@ export default defineStore('products', {
         addToCart(id) {
             axiosClient.get(`products/${id}`)
                 .then(({data}) => {
-                    this.cart.push(data)
-                })
+                    if (this.cart.length === 0) {
+                        this.cart.push({
+                            "product": data,
+                            "quantity": 1
+                        })
+                    } else {
+                        let productInCart = this.cart.find((element) => element.product.id == data.id)
+                        if (productInCart !== undefined) {
+                            productInCart.quantity += 1
+                        } else {
+                            this.cart.push({
+                            "product": data,
+                            "quantity": 1
+                        })
+                    }
+                }
+            })
         }
     }
 })
