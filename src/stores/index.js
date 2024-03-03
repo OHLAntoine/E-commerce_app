@@ -9,6 +9,13 @@ export default defineStore('products', {
         }),
     getters: {
         cartCount: (state) => state.cart.length,
+        cartPrice: (state) => {
+            let sum = 0
+            state.cart.forEach(product => {
+            sum += product.price
+        })
+        return sum
+        }
     },
     actions: {
         searchProducts(keyword) {
