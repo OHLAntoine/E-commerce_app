@@ -56,6 +56,19 @@ export default defineStore('products', {
                     }
                 }
             })
+        },
+        increaseQuantity(id) {
+            let productInCart = this.cart.find((element) => element.product.id == id)
+            productInCart.quantity += 1
+        },
+        decreaseQuantity(id) {
+            let productInCart = this.cart.find((element) => element.product.id == id)
+            if (productInCart.quantity == 1) {
+                let index = this.cart.indexOf(productInCart)
+                this.cart.splice(index, 1)
+            } else {
+                productInCart.quantity -= 1
+            }
         }
     }
 })
