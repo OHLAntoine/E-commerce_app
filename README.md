@@ -1,6 +1,8 @@
 # E-commerce_app
 
-E-commerce Application in Vue.js to pratice
+E-commerce Application in Vue.js to pratice.
+
+Using the API : https://dummyjson.com/ for products
 
 ## Recommended IDE Setup
 
