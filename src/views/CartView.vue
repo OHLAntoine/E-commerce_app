@@ -8,7 +8,7 @@
                 </div>
                 <cart-item v-for="(item, index) in store.cart" :key="index" :item="item"/>
             </div>
-            <cart-total :total="store.cartPrice"/>
+            <cart-total v-if="store.cart.length !== 0" :total="store.cartPrice"/>
         </div>
     </div>
 </template>

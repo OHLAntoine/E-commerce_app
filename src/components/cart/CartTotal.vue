@@ -16,11 +16,16 @@
 				<p class="text-sm text-gray-700">including VAT</p>
 			</div>
 		</div>
-		<button class="mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600">Check out</button>
+		<router-link
+			:to="{ name: 'checkOut' }"
+			class="mt-6 w-full rounded-md bg-blue-500 p-2 font-medium text-blue-50 hover:bg-blue-600"
+			>Check out</router-link>
 	</div>
 </template>
 
 <script setup>
+	import { RouterLink } from 'vue-router';
+
 	defineProps({
 		total: Number
 	})

@@ -69,6 +69,14 @@ export default defineStore('products', {
             } else {
                 productInCart.quantity -= 1
             }
+        },
+        removeFromCart(id) {
+            let productInCart = this.cart.find((element) => element.product.id == id)
+            let index = this.cart.indexOf(productInCart)
+            this.cart.splice(index, 1)
+        },
+        removeCart() {
+            this.cart = []
         }
     }
 })
