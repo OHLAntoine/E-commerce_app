@@ -7,9 +7,9 @@
             <button
                 href="" v-for="(category, index) in categories" :key="index"
                 class="text-center text-gray-600 hover:text-white py-2 rounded-lg hover:bg-blue-400"
-                @click="store.getProductsByCategory(category)"
+                @click="store.getProductsByCategory(category.name)"
                 >
-                {{ category }}
+                {{ category.name }}
             </button>
         </div>
         <product-card-list :products="store.productsByCategory"/>
